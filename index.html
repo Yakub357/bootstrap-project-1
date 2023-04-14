@@ -88,11 +88,18 @@
           </div>
 
           <div class="col-md-5 text-center">
-            <img
-              src="./assets/ebook-cover.png"
-              class="img-fluid d-none d-md-block"
-              alt="Ebook Cover"
-            />
+            <!-- * tooltips -->
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Coding Raccoon Book Cover"
+            >
+              <img
+                src="./assets/ebook-cover.png"
+                class="img-fluid d-none d-md-block"
+                alt="Ebook Cover"
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -463,6 +470,15 @@
                   id="email"
                   placeholder="e.g. raccoon@mail.com"
                 />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Enter email address we can reply to..."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
 
               <label for="text" class="form-label"> Name: </label>
@@ -476,6 +492,15 @@
                   id="name"
                   placeholder="e.g. Raccoon"
                 />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Enter your name."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
 
               <label for="subject" class="form-label"
@@ -516,5 +541,13 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- * Tooltip script -->
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(".tt");
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
